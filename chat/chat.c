@@ -135,7 +135,8 @@ int main()
 	chatroominit();
 	//setuid(0);
  
-	shmid = shmcreate((key_t)atoi(roomno));
+	// shmid = shmcreate((key_t)atoi(roomno));
+	shmid = shmcreate((key_t)2);
 	shmuseradd((struct shared_users_st *)shm);
 	shmuserlist((struct shared_users_st *)shm);
 	
